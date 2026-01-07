@@ -25,8 +25,8 @@ Dot is a simple daily mood tracking app that helps you:
 
 ## 📧 Contact
 
-For urgent issues: your.email@example.com
+For urgent issues: studylyfe99@gmail.com
 
 ---
 
-Made with 💚 by [Your Name]
+Made with 💚 by Dot
