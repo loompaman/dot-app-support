@@ -1,26 +1,245 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Dot Support</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dot - Daily Check-In | Support</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
-        body { font-family: -apple-system, sans-serif; max-width: 600px; margin: 50px auto; padding: 20px; }
-        h1 { color: #2ecc71; }
-        a { color: #2ecc71; }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: linear-gradient(135deg, #f5f7fa 0%, #e4e8ec 100%);
+            min-height: 100vh;
+            color: #1a1a2e;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 680px;
+            margin: 0 auto;
+            padding: 60px 24px;
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 48px;
+        }
+        
+        .logo {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, #2ecc71 0%, #27ae60 100%);
+            border-radius: 20px;
+            margin: 0 auto 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 10px 30px rgba(46, 204, 113, 0.3);
+        }
+        
+        .logo span {
+            font-size: 40px;
+        }
+        
+        h1 {
+            font-size: 32px;
+            font-weight: 700;
+            color: #1a1a2e;
+            margin-bottom: 8px;
+        }
+        
+        .tagline {
+            color: #666;
+            font-size: 16px;
+        }
+        
+        .card {
+            background: white;
+            border-radius: 16px;
+            padding: 32px;
+            margin-bottom: 24px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+        }
+        
+        .card h2 {
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .card h2 .icon {
+            font-size: 24px;
+        }
+        
+        .contact-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: linear-gradient(135deg, #2ecc71 0%, #27ae60 100%);
+            color: white;
+            text-decoration: none;
+            padding: 14px 28px;
+            border-radius: 12px;
+            font-weight: 600;
+            font-size: 16px;
+            transition: transform 0.2s, box-shadow 0.2s;
+            box-shadow: 0 4px 15px rgba(46, 204, 113, 0.3);
+        }
+        
+        .contact-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(46, 204, 113, 0.4);
+        }
+        
+        .faq-item {
+            padding: 20px 0;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .faq-item:last-child {
+            border-bottom: none;
+            padding-bottom: 0;
+        }
+        
+        .faq-item:first-child {
+            padding-top: 0;
+        }
+        
+        .faq-question {
+            font-weight: 600;
+            color: #1a1a2e;
+            margin-bottom: 8px;
+            font-size: 16px;
+        }
+        
+        .faq-answer {
+            color: #555;
+            font-size: 15px;
+        }
+        
+        .features {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 16px;
+            margin-top: 16px;
+        }
+        
+        .feature {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 14px;
+            color: #444;
+        }
+        
+        .feature .check {
+            color: #2ecc71;
+            font-weight: bold;
+        }
+        
+        .footer {
+            text-align: center;
+            margin-top: 48px;
+            color: #888;
+            font-size: 14px;
+        }
+        
+        .footer a {
+            color: #2ecc71;
+            text-decoration: none;
+        }
+        
+        @media (max-width: 480px) {
+            .features {
+                grid-template-columns: 1fr;
+            }
+            
+            h1 {
+                font-size: 26px;
+            }
+            
+            .card {
+                padding: 24px;
+            }
+        }
     </style>
 </head>
 <body>
-    <h1>🟢 Dot - Daily Check-In</h1>
-    <h2>Support</h2>
-    <p>Need help or have questions? Contact us:</p>
-    <p>📧 <a href="mailto:your.email@example.com">your.email@example.com</a></p>
-    <br>
-    <h2>FAQ</h2>
-    <p><strong>How do I track my mood?</strong><br>
-    Simply tap a number 0-10 to rate your day!</p>
-    <p><strong>Where is my data stored?</strong><br>
-    All data is stored locally on your device.</p>
-    <p><strong>How do I cancel my subscription?</strong><br>
-    Go to Settings → Apple ID → Subscriptions → Dot → Cancel</p>
+    <div class="container">
+        <header class="header">
+            <div class="logo">
+                <span>🟢</span>
+            </div>
+            <h1>Dot - Daily Check-In</h1>
+            <p class="tagline">Track your mood, one day at a time</p>
+        </header>
+        
+        <div class="card">
+            <h2><span class="icon">💬</span> Contact Support</h2>
+            <p style="color: #555; margin-bottom: 20px;">
+                Have a question, feedback, or need help? We'd love to hear from you and typically respond within 24 hours.
+            </p>
+            <a href="mailto:studylyfe99@gmail.com" class="contact-btn">
+                ✉️ Email Us
+            </a>
+        </div>
+        
+        <div class="card">
+            <h2><span class="icon">❓</span> Frequently Asked Questions</h2>
+            
+            <div class="faq-item">
+                <div class="faq-question">How do I track my mood?</div>
+                <div class="faq-answer">Simply tap a number from 0-10 to rate your day. You can also add notes about what went well or didn't go well.</div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">Where is my data stored?</div>
+                <div class="faq-answer">All your data is stored locally on your device. We don't have access to your personal entries - your privacy is fully protected.</div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">How do I cancel my subscription?</div>
+                <div class="faq-answer">Open the Settings app → Tap your name (Apple ID) → Subscriptions → Select Dot → Cancel Subscription.</div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">Can I restore my purchase on a new device?</div>
+                <div class="faq-answer">Yes! Go to the Profile tab in the app and tap "Restore Purchases" to restore your premium subscription.</div>
+            </div>
+        </div>
+        
+        <div class="card">
+            <h2><span class="icon">✨</span> About Dot</h2>
+            <p style="color: #555; margin-bottom: 16px;">
+                Dot helps you build a daily reflection habit in just seconds. Rate your day, track patterns, and gain insights into your well-being over time.
+            </p>
+            <div class="features">
+                <div class="feature"><span class="check">✓</span> Quick daily check-ins</div>
+                <div class="feature"><span class="check">✓</span> Year-in-pixels view</div>
+                <div class="feature"><span class="check">✓</span> Habit tracking</div>
+                <div class="feature"><span class="check">✓</span> Mood insights</div>
+            </div>
+        </div>
+        
+        <footer class="footer">
+            <p>
+                <a href="https://github.com/loompaman/dot-app-support/blob/main/PRIVACY.md">Privacy Policy</a>
+                 · 
+                <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/">Terms of Use</a>
+            </p>
+            <p style="margin-top: 12px;">© 2026 Dot - Daily Check-In</p>
+        </footer>
+    </div>
 </body>
 </html>
